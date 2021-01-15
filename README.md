@@ -9,9 +9,8 @@ Assembly with supernova (10x Genomics)
 6. Extract scaffolds from fasta and blast these scaffolds against the whole genome, for this, make the genome a blast database first with *blast_halfcov.sh*
 7. Select which scaffold to remove using the blast results and script *remove_scaffolds.py*
 8. Remove scaffolds from assembly using *filter_fasta_by_list_of_headers.py*. This last script was obtained from bioinformatics stackexchange (https://bioinformatics.stackexchange.com/questions/3931/remove-delete-sequences-by-id-from-multifasta)
-9. Check removal of half coverage scaffolds and remove manually if needed (see section CHECK REMOVAL OF HALF COV CAFFOLDS)
-10. Remove scaffolds that are just N with *removeNscaff.py* 
-11. Run BUSCO
+9. Remove scaffolds that are just N with *removeNscaff.py* 
+10. Run BUSCO
 
 
 Note: Most of the codes here do not take arguments, if somebody would want to use them, please submit and issue and I will make them more universal. You can also use them, but change the names of the files that it takes as an input. Sorry for the inconviniences (and lazy coding).
