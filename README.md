@@ -8,7 +8,7 @@ Assembly with supernova (10x Genomics)
 5. Identify half Coverage scaffold with script *coverage.py*, which uses bwa alignment output
 6. Extract scaffolds from fasta and blast these scaffolds against the whole genome, for this, make the genome a blast database first with *blast_halfcov.sh*
 7. Select which scaffold to remove using the blast results and script *remove_scaffolds.py*
-8. Do whole scaffold alignments with MUMer
+8. Do whole scaffold alignments with MUMmer *mum_removed_kept.sh*
 9. Remove scaffolds from assembly using *filter_fasta_by_list_of_headers.py*. This last script was obtained from bioinformatics stackexchange (https://bioinformatics.stackexchange.com/questions/3931/remove-delete-sequences-by-id-from-multifasta)
 10. Remove scaffolds that are just N with *removeNscaff.py* 
 11. Run BUSCO
