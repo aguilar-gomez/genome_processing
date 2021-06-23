@@ -12,6 +12,7 @@ Assembly with supernova (10x Genomics)
 9. Remove scaffolds from assembly using *filter_fasta_by_list_of_headers.py*. This last script was obtained from bioinformatics stackexchange (https://bioinformatics.stackexchange.com/questions/3931/remove-delete-sequences-by-id-from-multifasta)
 10. Remove scaffolds that are just N with *removeNscaff.py* 
 11. Run BUSCO
+12. For submission to NCBI database they requested to trim all leading and traling Ns from all the sequences. They also have an option to indicate the size of the gap in terms of Ns. Supernova default output inserts 100 Ns in every gap, we replaced 100 Ns for 10 Ns because that is the maximum number that NCBI WGS submission allows. We used the script *supernova2NCBI.py* for this processing
 
 
 Note: Most of the codes here do not take arguments, if somebody would want to use them, please submit and issue and I will make them more universal. You can also use them, but change the names of the files that it takes as an input.
