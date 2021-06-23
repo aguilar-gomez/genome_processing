@@ -14,4 +14,4 @@ Assembly with supernova (10x Genomics)
 11. Run BUSCO
 
 
-Note: Most of the codes here do not take arguments, if somebody would want to use them, please submit and issue and I will make them more universal. You can also use them, but change the names of the files that it takes as an input. Sorry for the inconviniences (and lazy coding).
+Note: Most of the codes here do not take arguments, if somebody would want to use them, please submit and issue and I will make them more universal. You can also use them, but change the names of the files that it takes as an input.
