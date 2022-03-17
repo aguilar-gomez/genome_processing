@@ -15,10 +15,14 @@ def file2df(file):
     return df
 #Read file, structure: chr, start, end, cov
 guian=file2df("../../guian_fastq/new_pseudohap/guian_window")
-chrs=guian.groupby([0])[2].max()
+chrs=guian.groupby([0])[1].max()+10000
 a=chrs.index.to_series().str.rsplit('chr').str[-1].astype(int).sort_values()
 chrs = chrs.reindex(index=a.index)
- 
+
+#Sort original data
+guian["length"]=chrs[guian[0]].values
+guian=guian.sort_values(["length",1],ascending=[False,True])
+
 #Plot to see which is the range of half coverage
 plt.rcParams["figure.figsize"] = (15,5)
 ini=0
