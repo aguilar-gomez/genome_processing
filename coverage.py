@@ -15,7 +15,9 @@ def file2df(file):
     return df
 #Read file, structure: chr, start, end, cov
 guian=file2df("../../guian_fastq/new_pseudohap/guian_window")
-chrs=guian.groupby([0])[1].max()+10000
+
+#Sort chromosomes by size
+chrs=guian.groupby([0])[1].max()
 a=chrs.index.to_series().str.rsplit('chr').str[-1].astype(int).sort_values()
 chrs = chrs.reindex(index=a.index)
 
